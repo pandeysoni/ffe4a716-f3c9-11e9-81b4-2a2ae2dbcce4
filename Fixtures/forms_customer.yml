@@ -1,0 +1,119 @@
+default:
+  production:
+    customerLogin:
+      - type: email
+        name: login_email
+        label: form_label_email
+        required: true
+        tabIndex: 1
+
+      - type: password
+        name: login_password
+        label: password_form_label
+        required: true
+        tabIndex: 2
+
+    customerData:
+      - type: gender
+        name: gender
+        label: form_label_gender
+        required: true
+        tabIndex: 1
+
+      - type: text
+        name: firstName
+        label: form_label_first_name
+        required: true
+        tabIndex: 2
+        constraints:
+          - type: Length
+            min: 2
+            minMessage: form_firstname_error
+
+      - type: text
+        name: lastName
+        label: form_label_last_name
+        required: true
+        tabIndex: 3
+        constraints:
+          - type: Length
+            min: 2
+            minMessage: form_lastname_error
+
+      - type: telephone
+        name: telephone
+        label: form_label_telephone
+        required: true
+        tabIndex: 4
+        constraints:
+          - type: Pattern
+            pattern: '^[0-9\-+.,/() ]{2,20}$'
+            message: form_phone_error
+
+      - type: date
+        name: birthday
+        label: form_label_birthday
+        required: true
+        tabIndex: 5
+
+    customerEmail:
+      - type: email
+        name: email
+        label: form_label_email_new
+        required: true
+        tabIndex: 6
+        constraints:
+          - type: IsEmailValid
+            message: form_mail_error_notvalid
+          - type: IsBlacklisted
+            message: form_mail_error
+          - type: IsUniqueUsername
+            message: form_mail_error_alreadyused
+
+      - type: email
+        name: emailVerify
+        label: form_label_email_new_repeat
+        required: true
+        tabIndex: 7
+        constraints:
+          - type: IsEmailValid
+            message: form_mail_error_notvalid
+          - type: IsBlacklisted
+            message: form_mail_error
+          - type: IsUniqueUsername
+            message: form_mail_error_alreadyused
+
+    customerPassword:
+      - type: password
+        name: password
+        label: customer_password_old
+        required: true
+      - type: password
+        name: passwordNew
+        label: customer_password_new
+        hint: 'form_hint_password'
+        required: true
+        tabIndex: 8
+        constraints:
+        - type: Pattern
+          pattern: '^[a-zA-Z0-9_\-.,@\$\/=!?+*():;#%&§]{5,32}$'
+          message: ~
+
+    customerForgotPassword:
+      - type: email
+        name: password_email
+        label: form_label_email
+        required: true
+        tabIndex: 9
+
+    customerRestorePassword:
+      - type: password
+        name: password
+        label: customer_password_new
+        hint: 'form_hint_password'
+        required: true
+        tabIndex: 10
+        constraints:
+        - type: Pattern
+          pattern: '^[a-zA-Z0-9_\-.,@\$\/=!?+*():;#%&§]{5,32}$'
+          message: ~

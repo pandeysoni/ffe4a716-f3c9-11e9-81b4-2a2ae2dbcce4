@@ -1,0 +1,53 @@
+default:
+  production:
+    customerData:
+      - type: gender
+        name: gender
+        label: form_label_gender
+        required: true
+        tabIndex: 1
+
+      - type: text
+        name: firstName
+        label: form_label_first_name
+        required: true
+        tabIndex: 2
+        constraints:
+          - type: Length
+            min: 2
+            minMessage: form_firstname_error
+
+      - type: text
+        name: lastName
+        label: form_label_last_name
+        required: true
+        tabIndex: 3
+        constraints:
+          - type: Length
+            min: 2
+            minMessage: form_lastname_error
+
+      - type: text
+        name: taxNumber
+        label: form_label_taxnumber
+        required: false
+        tabIndex: 4
+        constraints:
+          - type: CodiceFiscale
+            message: form_taxnumber_error
+
+      - type: telephone
+        name: telephone
+        label: form_label_telephone
+        required: true
+        tabIndex: 5
+        constraints:
+          - type: Pattern
+            pattern: '^[0-9\-+.,/() ]{2,20}$'
+            message: form_phone_error
+
+      - type: date
+        name: birthday
+        label: form_label_birthday
+        required: true
+        tabIndex: 6

@@ -1,0 +1,88 @@
+{
+    "anpl": {
+        "production": {
+            "payment": {
+                "p24": {
+                    "active": true,
+                    "symbol": "p24",
+                    "position": 1
+                },
+                "klarna_invoice": {
+                    "active": false,
+                    "symbol": "klarna",
+                    "label": true,
+                    "position": 15
+                },
+                "klarna_finance": {
+                    "active": false,
+                    "symbol": "klarna",
+                    "label": true,
+                    "position": 16
+                },
+                "cash_on_delivery": {
+                    "active": false,
+                    "symbol": "cash_on_delivery",
+                    "label": true,
+                    "position": 9
+                },
+                "santander": {
+                    "active": false,
+                    "symbol": "",
+                    "position": 8
+                },
+                "billpay": {
+                    "active": false,
+                    "symbol": "billpay",
+                    "label": true,
+                    "position": 4
+                },
+                "billpay_invoice": {
+                    "active": false,
+                    "symbol": "billpay",
+                    "label": true,
+                    "position": 3
+                },
+                "billpay_paylater": {
+                    "active": false,
+                    "symbol": "paylater",
+                    "label": true,
+                    "position": 5
+                },
+                "directtransfer": {
+                    "active": false,
+                    "symbol": "directtransfer",
+                    "position": 6
+                },
+                "moneyorder": {
+                    "active": false,
+                    "symbol": "moneyorder",
+                    "label": true,
+                    "position": 4
+                },
+                "paypal": {
+                    "active": true,
+                    "symbol": "paypal",
+                    "position": 3
+                },
+                "creditcard": {
+                    "active": true,
+                    "symbol": "creditcard",
+                    "label": true,
+                    "config": {
+                        "availableTypes": [
+                            "visa",
+                            "mastercard"
+                        ]
+                    },
+                    "position": 2
+                },
+                "voucherPayment": {
+                    "active": true,
+                    "symbol": "voucher",
+                    "label": true,
+                    "position": 12
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+production:
+  googleSiteVerification: yBAco_6L0d1XISkO-SFPmffmeXzrDiNJdsycoCxoYEA
+  currency:
+    positionSymbol: 0
+    thousand_separator: ""
+  moneyOrderInformation:
+    payee: 'Internetstores GmbH'
+    bic: SWBSDESSXXX
+    iban: DE79600907000640267041
+    bank: 'Südwestbank AG Stuttgart'
+    reference: 'Order number'
+  country:
+    21:  { countryName: 'België',isoCode2: BE, isoCode3: BEL, addressFormatId: 5 , taxRates: { 1: 21, 2: 6 } }

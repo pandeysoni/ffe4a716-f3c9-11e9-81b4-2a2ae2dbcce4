@@ -1,0 +1,146 @@
+{
+    "production": {
+        "stepStyle": "multi",
+        "stepperNav": true,
+        "steps": {
+            "0": {
+                "name": "Cart",
+                "inNav": false,
+                "pay": false
+            },
+            "1": {
+                "name": "Step1",
+                "inNav": false,
+                "pay": false,
+                "loggedIn": {
+                    "name": "Address",
+                    "inNav": true,
+                    "label": "checkout_address",
+                    "id": "1"
+                }
+            },
+            "2": {
+                "name": "Payment",
+                "inNav": true,
+                "label": "checkout_payment",
+                "pay": true,
+                "id": "2"
+            },
+            "3": {
+                "name": "Overview",
+                "inNav": true,
+                "label": "checkout_overview",
+                "id": "3",
+                "pay": false
+            },
+            "4": {
+                "name": "Confirmation",
+                "pay": false,
+                "inNav": false
+            }
+        },
+        "payment": {
+            "ideal": {
+                "active": false,
+                "symbol": "ideal",
+                "position": 17
+            },
+            "klarna_invoice": {
+                "active": false,
+                "symbol": "klarna",
+                "label": true,
+                "position": 15
+            },
+            "klarna_finance": {
+                "active": false,
+                "symbol": "klarna",
+                "label": true,
+                "position": 16
+            },
+            "cash_on_delivery": {
+                "active": true,
+                "symbol": "cash_on_delivery",
+                "label": true,
+                "position": 9
+            },
+            "santander": {
+                "active": false,
+                "symbol": "",
+                "position": 8
+            },
+            "billpay": {
+                "active": true,
+                "symbol": "billpay",
+                "label": true,
+                "position": "4"
+            },
+            "billpay_invoice": {
+                "active": true,
+                "symbol": "billpay",
+                "label": true,
+                "position": 3
+            },
+            "billpay_paylater": {
+                "active": true,
+                "symbol": "paylater",
+                "label": true,
+                "position": 5
+            },
+            "directtransfer": {
+                "active": true,
+                "symbol": "directtransfer",
+                "position": 6
+            },
+            "moneyorder": {
+                "active": true,
+                "symbol": "moneyorder",
+                "label": true,
+                "position": 7
+            },
+            "paypal": {
+                "active": true,
+                "symbol": "paypal",
+                "position": 1
+            },
+            "creditcard": {
+                "active": true,
+                "symbol": "creditcard",
+                "label": true,
+                "config": {
+                    "availableTypes": [
+                        "visa",
+                        "mastercard"
+                    ]
+                },
+                "position": 2
+            },
+            "voucherPayment": {
+                "active": true,
+                "symbol": "voucher",
+                "label": true,
+                "position": 12
+            }
+        },
+        "klarna": {
+            "ordersName": "klarna_checkout",
+            "active": false,
+            "merchantId": "2468",
+            "sharedSecret": "ryckZqFxB75WQ3o",
+            "baseUri": "https://checkout.klarna.com",
+            "contentType": "application/vnd.klarna.checkout.aggregated-order-v2+json",
+            "fetchUri": "/checkout/orders/",
+            "confirmationUri": "/checkout/klarna/confirmation.html",
+            "pushUri": "/checkout/klarna/confirm/klarnacheckout?klarna_order={checkout.order.uri}"
+        }
+    },
+    "staging": {
+        "klarna": {
+            "baseUri": "https://checkout.testdrive.klarna.com"
+        }
+    },
+    "development": {
+        "klarna": {
+            "baseUri": "https://checkout.testdrive.klarna.com"
+        }
+    }
+}
