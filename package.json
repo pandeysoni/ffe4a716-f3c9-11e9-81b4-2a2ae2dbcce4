@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "inquirer": "^7.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.21",
     "read-yaml": "^1.1.0"
   },
   "devDependencies": {
